@@ -4,7 +4,7 @@
 #include <input/processors.dtsi>
 
 #define DEFAULT_CPI 600        // トラックボールの感度
-#define ROTATION_ANGLE 20        // トラックボールのY軸を回転
+#define ROTATION_ANGLE 30        // トラックボールのY軸を回転
 #define CLIPPER_THRESHOLD 40    // スクロール時に斜めの値をクリップ
 
 #define SCROLL_LAYER_1 1          // スクロールを有効にするレイヤー1
@@ -160,7 +160,7 @@
                            <&motion_scaler>;
 
         scroll {
-            layers = <SCROLL_LAYER_1 SCROLL_LAYER_2>;
+            layers = <SCROLL_LAYER_2>;
             input-processors = <&sensor_rotation>,
                                <&xy_clipper>,
                                <&scroll_motion_scaler>,
