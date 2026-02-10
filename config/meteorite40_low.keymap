@@ -178,7 +178,7 @@
                 &kp EXCL    &kp AT      &kp HASH     &kp DLLR      &kp PRCNT                           &kp CARET    &kp AMPS        &kp STAR      &kp LPAR      &kp RPAR
                 &kp N1      &kp N2      &kp N3       &kp N4        &kp N5                              &kp PIPE     &kp MINUS       &kp EQUAL     &kp LBKT      &kp RBKT
                 &kp N6      &kp N7      &kp N8       &kp N9        &kp N0      &mkp MB3    &alt_mb1    &kp BSLH     &kp UNDERSCORE  &kp PLUS      &kp LBRC      &kp RBRC
-									&kp GRAVE    &kp TILDE     &lt 5 LG(SPACE)   &kp LG(C)   &kp LG(V)   &mo 1        &none           &none
+									  &kp GRAVE    &kp TILDE     &lt 5 ENTER   &kp LG(C)   &kp LG(V)   &mo 1        &none           &none
             >;
         };
 
@@ -215,10 +215,10 @@
 		layer_5 {
 			display-name = "SHIFT";
 			bindings = <
-                &kp LS(Q)        &kp LS(W)       &kp LS(E)        &kp LS(R)        &kp LS(T)                                 &kp LS(Y)        &kp LS(U)       &kp LS(I)       &kp LS(O)    &kp LS(P)
-                &kp LS(A)        &kp LS(S)       &kp LS(D)        &kp LS(F)        &kp LS(G)                                 &kp LS(H)        &kp LS(J)       &kp LS(K)       &kp LS(L)    &kp LS(SEMI) 
-                &kp LS(Z)        &kp LS(X)       &kp LS(C)        &kp LS(V)        &kp LS(B)       &none        &none        &kp LS(N)        &kp LS(M)       &kp LS(COMMA)   &kp LS(DOT)  &kp LS(SLASH)
-                                                 &none            &none            &mo 5           &none        &none        &mo 5            &none           &none
+                &kp LS(Q)        &kp LS(W)       &kp LS(E)        &kp LS(R)        &kp LS(T)                                 		&kp LS(Y)        &kp LS(U)       &kp LS(I)       &kp LS(O)    &kp LS(P)
+                &kp LS(A)        &kp LS(S)       &kp LS(D)        &kp LS(F)        &kp LS(G)                                 		&kp LS(H)        &kp LS(J)       &kp LS(K)       &kp LS(L)    &kp LS(SEMI) 
+                &kp LS(Z)        &kp LS(X)       &kp LS(C)        &kp LS(V)        &kp LS(B)    &ccfg C_CPI_DN  &ccfg C_CPI_UP      &kp LS(N)        &kp LS(M)       &kp LS(COMMA)   &kp LS(DOT)  &kp LS(SLASH)
+                                                 &none            &none            &mo 5        &ccfg C_ROT_DN  &ccfg C_ROT_UP      &mo 5            &none           &none
             >;
         };
     };
