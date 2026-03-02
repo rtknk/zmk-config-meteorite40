@@ -139,7 +139,7 @@
                 &kp LG(A)        &kp LG(S)       &kp LG(D)        &kp LG(F)        &kp LG(G)                                 &kp LG(H)        &kp LG(J)       &kp LG(K)       &kp LG(L)    &kp LG(SEMI) 
                 &mt LSHIFT LG(Z) &kp LG(X)       &kp LG(C)        &kp LG(V)        &kp LG(B)       &none        &none        &kp LG(N)        &kp LG(M)       &kp LG(COMMA)   &kp LG(DOT)  &mt LSHIFT LG(SLASH)
                                                  &kp LG(LCTRL)    &kp LSHIFT       &kp LG(SPACE)   &mo 7        &mo 7        &kp LS(ENTER)    &mo 3           &kp LG(LALT)
-            
+            >;
         };
 
         layer_4 {
