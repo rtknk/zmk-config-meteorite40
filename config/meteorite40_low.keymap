@@ -138,8 +138,8 @@
                 &kp LG(Q)        &kp LG(W)       &kp LG(E)        &kp LG(R)        &kp LG(T)                                 &kp LG(Y)        &kp LG(U)       &kp LG(I)       &kp LG(O)    &kp LG(P)
                 &kp LG(A)        &kp LG(S)       &kp LG(D)        &kp LG(F)        &kp LG(G)                                 &kp LG(H)        &kp LG(J)       &kp LG(K)       &kp LG(L)    &kp LG(SEMI) 
                 &mt LSHIFT LG(Z) &kp LG(X)       &kp LG(C)        &kp LG(V)        &kp LG(B)       &none        &none        &kp LG(N)        &kp LG(M)       &kp LG(COMMA)   &kp LG(DOT)  &mt LSHIFT LG(SLASH)
-                                                 &kp LG(LCTRL)    &kp LSHIFT       &kp LG(SPACE)   &none        &none        &kp LS(ENTER)        &mo 3           &kp LG(LALT)
-            >;
+                                                 &kp LG(LCTRL)    &kp LSHIFT       &kp LG(SPACE)   &mo 7        &mo 7        &kp LS(ENTER)    &mo 3           &kp LG(LALT)
+            
         };
 
         layer_4 {
@@ -148,17 +148,37 @@
                 &kp LG(Q)        &kp LG(W)       &kp LG(E)        &kp LG(R)        &kp LG(T)                                 &kp LG(Y)        &kp LG(U)       &kp LG(I)       &kp LG(O)    &kp LG(P)
                 &kp LG(A)        &kp LG(S)       &kp LG(D)        &kp LG(F)        &kp LG(G)                                 &kp LG(H)        &kp LG(J)       &kp LG(K)       &kp LG(L)    &kp LG(SEMI) 
                 &mt LSHIFT LG(Z) &kp LG(X)       &kp LG(C)        &kp LG(V)        &kp LG(B)       &none        &none        &kp LG(N)        &kp LG(M)       &kp LG(COMMA)   &kp LG(DOT)  &mt LSHIFT LG(SLASH)
-                                                 &kp LG(LCTRL)    &mo 4            &kp SPACE       &none        &none        &kp LS(ENTER)    &kp LSHIFT      &kp LG(LALT)
+                                                 &kp LG(LCTRL)    &mo 4            &kp LG(SPACE)   &mo 7        &mo 7        &kp LS(ENTER)    &kp LSHIFT      &kp LG(LALT)
             >;
         };
 
 		layer_5 {
-			display-name = "SHIFT";
+			display-name = "RSHIFT";
 			bindings = <
                 &kp LS(Q)        &kp LS(W)       &kp LS(E)        &kp LS(R)        &kp LS(T)                       		&kp LS(Y)        &kp LS(U)       &kp LS(I)       &kp LS(O)    &kp LS(P)
                 &kp LS(A)        &kp LS(S)       &kp LS(D)        &kp LS(F)        &kp LS(G)                       		&kp LS(H)        &kp LS(J)       &kp LS(K)       &kp LS(L)    &kp LS(SEMI) 
-                &kp LS(Z)        &kp LS(X)       &kp LS(C)        &kp LS(V)        &kp LS(B)    &none        &none      &kp LS(N)        &kp LS(M)       &kp LS(COMMA)   &kp LS(DOT)  &kp LS(SLASH)
-                                                 &none            &none            &mo 5        &mo 5        &mo 5      &kp LS(ENTER)    &none           &none
+                &kp LS(Z)        &kp LS(X)       &kp LS(C)        &kp LS(V)        &kp LS(B)      &none      &none      &kp LS(N)        &kp LS(M)       &kp LS(COMMA)   &kp LS(DOT)  &kp LS(SLASH)
+                                                 &none            &none            &kp LS(SPACE)  &mo 5      &mo 7      &kp LS(ENTER)    &none           &none
+            >;
+        };
+
+		layer_6 {
+			display-name = "LSHIFT";
+			bindings = <
+                &kp LS(Q)        &kp LS(W)       &kp LS(E)        &kp LS(R)        &kp LS(T)                       		&kp LS(Y)        &kp LS(U)       &kp LS(I)       &kp LS(O)    &kp LS(P)
+                &kp LS(A)        &kp LS(S)       &kp LS(D)        &kp LS(F)        &kp LS(G)                       		&kp LS(H)        &kp LS(J)       &kp LS(K)       &kp LS(L)    &kp LS(SEMI) 
+                &kp LS(Z)        &kp LS(X)       &kp LS(C)        &kp LS(V)        &kp LS(B)      &none        &none    &kp LS(N)        &kp LS(M)       &kp LS(COMMA)   &kp LS(DOT)  &kp LS(SLASH)
+                                                 &none            &none            &ko LS(SPACE)  &mo 7        &mo 6    &kp LS(ENTER)    &none           &none
+            >;
+        };
+
+		layer_7 {
+			display-name = "SHIFT+GUI";
+			bindings = <
+                &kp LG(LS(Q))   &kp LG(LS(W))   &kp LG(LS(E))    &kp LG(LS(R))    &kp LG(LS(T))                		 &kp LG(LS(Y))  &kp LG(LS(U))   &kp LG(LS(I))       &kp LG(LS(O))    &kp LG(LS(P))
+                &kp LG(LS(A))   &kp LG(LS(S))   &kp LG(LS(D))    &kp LG(LS(F))    &kp LG(LS(G))                		 &kp LG(LS(H))  &kp LG(LS(J))   &kp LG(LS(K))       &kp LG(LS(L))    &kp LG(LS(SEMI)) 
+                &kp LG(LS(Z))   &kp LG(LS(X))   &kp LG(LS(C))    &kp LG(LS(V))    &kp LG(LS(B))    &none    &none    &kp LG(LS(N))  &kp LG(LS(M))   &kp LG(LS(COMMA))   &kp LG(LS(DOT))  &kp LG(LS(SLASH))
+                                                		 	       &none     &none      &none      &mo 7    &mo 7    &none    		&none           &none
             >;
         };
     };
