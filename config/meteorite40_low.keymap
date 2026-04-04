@@ -84,20 +84,6 @@
 
     };
 
-	macros {
-        // Alt + Left Click Macro
-        alt_mb1: alt_mb1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>      // Altを押す
-                , <&macro_press &mkp MB1>      // 左クリックを押す
-                , <&macro_pause_for_release>   // キーを離すまで待機
-                , <&macro_release &mkp MB1>    // 左クリックを離す
-                , <&macro_release &kp LALT>;   // Altを離す
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         layout = &LOW_PROFILE_DEFAULT;
@@ -108,7 +94,7 @@
                 &kp Q        &kp W       &kp E        &kp R        &kp T                                &kp Y        &kp U      &kp I       &kp O    &kp P
                 &kp A        &kp S       &kp D        &kp F        &kp G                                &kp H        &kp J      &kp K       &kp L    &kp SEMI 
                 &mt LSHIFT Z &kp X       &kp C        &kp V        &kp B        &mkp MB1     &mkp MB2   &kp N        &kp M      &kp COMMA   &kp DOT  &mt LSHIFT SLASH
-									 &kp LCTRL        &mo 4    &lt 2 SPACE  &lt 5 LG(LBKT)   &lt 5 LG(RBKT)   &lt 1  ENTER      &mo 3       &kp LALT
+									     &kp LCTRL    &kp LGUI     &lt 2 SPACE  &kp DEL      &kp BSPC   &lt 1 ENTER  &kp LGUI   &kp LALT
             >;
         };
 
@@ -116,69 +102,19 @@
             display-name = "SYMBOLS";
             bindings = <
                 &kp EXCL    &kp AT      &kp HASH     &kp DLLR      &kp PRCNT                           &kp CARET    &kp AMPS        &kp STAR      &kp LPAR      &kp RPAR
-                &kp N1      &kp N2      &kp N3       &kp N4        &kp N5                              &kp PIPE     &kp MINUS       &kp EQUAL     &kp LBKT      &kp RBKT
-                &kp N6      &kp N7      &kp N8       &kp N9        &kp N0      &mkp MB3    &alt_mb1    &kp BSLH     &kp UNDERSCORE  &kp PLUS      &kp LBRC      &kp RBRC
-									  &kp GRAVE    &kp TILDE    &kp LG(SPACE)  &kp LG(C)   &kp LG(V)   &mo 1        &none           &none
+                &kp N1      &kp N2      &kp N3       &kp N4        &kp N5                              &kp TILDE    &kp MINUS       &kp EQUAL     &kp LBKT      &kp RBKT
+                &kp N6      &kp N7      &kp N8       &kp N9        &kp N0      &kp PIPE    &kp BSLH    &kp GRAVE    &kp UNDERSCORE  &kp PLUS      &kp LBRC      &kp RBRC
+									    &none        &none         &kp SPACE   &trans      &trans      &mo 1        &none           &none
             >;
         };
 
         layer_2 {
             display-name = "ARROW";
             bindings = <
-                &kp ESC    &kp HOME       &kp UP         &kp END        &none                                &kp DEL         &kp C_VOL_DN    &kp C_VOL_UP   &kp C_MUTE  &kp BSPC
-                &kp TAB    &kp LEFT       &kp DOWN       &kp RIGHT      &none                                &kp LS(LALT)    &kp LSHIFT      &kp LGUI       &kp LALT    &kp LCTRL
-                &kp LSHIFT &kp LG(LS(N3)) &kp LG(LS(N4)) &kp LG(LS(N5)) &none       &mkp MB3     &alt_mb1    &none           &kp LG(MINUS)   &kp LG(EQUAL)  &none       &kp LSHIFT
-								     	&none	  		 &none  		&mo 2      &kp LG(C)   &kp LG(V)	 &kp LG(SPACE)   &kp LS(LC(TAB)) &kp LC(TAB)
-            >;
-        };
-
-        layer_3 {
-            display-name = "RGUI";
-            bindings = <
-                &kp LG(Q)        &kp LG(W)       &kp LG(E)        &kp LG(R)        &kp LG(T)                                 &kp LG(Y)        &kp LG(U)       &kp LG(I)       &kp LG(O)    &kp LG(P)
-                &kp LG(A)        &kp LG(S)       &kp LG(D)        &kp LG(F)        &kp LG(G)                                 &kp LG(H)        &kp LG(J)       &kp LG(K)       &kp LG(L)    &kp LG(SEMI) 
-                &mt LSHIFT LG(Z) &kp LG(X)       &kp LG(C)        &kp LG(V)        &kp LG(B)       &none        &none        &kp LG(N)        &kp LG(M)       &kp LG(COMMA)   &kp LG(DOT)  &mt LSHIFT LG(SLASH)
-                                                 &kp LG(LCTRL)    &kp LSHIFT       &kp LG(SPACE)   &mo 7        &mo 7        &kp LS(ENTER)    &mo 3           &kp LG(LALT)
-            >;
-        };
-
-        layer_4 {
-			display-name = "LGUI";
-			bindings = <
-                &kp LG(Q)        &kp LG(W)       &kp LG(E)        &kp LG(R)        &kp LG(T)                                 &kp LG(Y)        &kp LG(U)       &kp LG(I)       &kp LG(O)    &kp LG(P)
-                &kp LG(A)        &kp LG(S)       &kp LG(D)        &kp LG(F)        &kp LG(G)                                 &kp LG(H)        &kp LG(J)       &kp LG(K)       &kp LG(L)    &kp LG(SEMI) 
-                &mt LSHIFT LG(Z) &kp LG(X)       &kp LG(C)        &kp LG(V)        &kp LG(B)       &none        &none        &kp LG(N)        &kp LG(M)       &kp LG(COMMA)   &kp LG(DOT)  &mt LSHIFT LG(SLASH)
-                                                 &kp LG(LCTRL)    &mo 4            &kp LG(SPACE)   &mo 7        &mo 7        &kp LS(ENTER)    &kp LSHIFT      &kp LG(LALT)
-            >;
-        };
-
-		layer_5 {
-			display-name = "RSHIFT";
-			bindings = <
-                &kp LS(Q)        &kp LS(W)       &kp LS(E)        &kp LS(R)        &kp LS(T)                       		&kp LS(Y)        &kp LS(U)       &kp LS(I)       &kp LS(O)    &kp LS(P)
-                &kp LS(A)        &kp LS(S)       &kp LS(D)        &kp LS(F)        &kp LS(G)                       		&kp LS(H)        &kp LS(J)       &kp LS(K)       &kp LS(L)    &kp LS(SEMI) 
-                &kp LS(Z)        &kp LS(X)       &kp LS(C)        &kp LS(V)        &kp LS(B)      &none      &none      &kp LS(N)        &kp LS(M)       &kp LS(COMMA)   &kp LS(DOT)  &kp LS(SLASH)
-                                                 &none            &none            &kp LS(SPACE)  &mo 5      &mo 7      &kp LS(ENTER)    &none           &none
-            >;
-        };
-
-		layer_6 {
-			display-name = "LSHIFT";
-			bindings = <
-                &kp LS(Q)        &kp LS(W)       &kp LS(E)        &kp LS(R)        &kp LS(T)                       		&kp LS(Y)        &kp LS(U)       &kp LS(I)       &kp LS(O)    &kp LS(P)
-                &kp LS(A)        &kp LS(S)       &kp LS(D)        &kp LS(F)        &kp LS(G)                       		&kp LS(H)        &kp LS(J)       &kp LS(K)       &kp LS(L)    &kp LS(SEMI) 
-                &kp LS(Z)        &kp LS(X)       &kp LS(C)        &kp LS(V)        &kp LS(B)      &none        &none    &kp LS(N)        &kp LS(M)       &kp LS(COMMA)   &kp LS(DOT)  &kp LS(SLASH)
-                                                 &none            &none            &kp LS(SPACE)  &mo 7        &mo 6    &kp LS(ENTER)    &none           &none
-            >;
-        };
-
-		layer_7 {
-			display-name = "SHIFT+GUI";
-			bindings = <
-                &kp LG(LS(Q))   &kp LG(LS(W))   &kp LG(LS(E))    &kp LG(LS(R))    &kp LG(LS(T))                		 &kp LG(LS(Y))  &kp LG(LS(U))   &kp LG(LS(I))       &kp LG(LS(O))    &kp LG(LS(P))
-                &kp LG(LS(A))   &kp LG(LS(S))   &kp LG(LS(D))    &kp LG(LS(F))    &kp LG(LS(G))                		 &kp LG(LS(H))  &kp LG(LS(J))   &kp LG(LS(K))       &kp LG(LS(L))    &kp LG(LS(SEMI)) 
-                &kp LG(LS(Z))   &kp LG(LS(X))   &kp LG(LS(C))    &kp LG(LS(V))    &kp LG(LS(B))    &none    &none    &kp LG(LS(N))  &kp LG(LS(M))   &kp LG(LS(COMMA))   &kp LG(LS(DOT))  &kp LG(LS(SLASH))
-                                                		 	       &none     &none      &none      &mo 7    &mo 7    &none    		&none           &none
+                &kp ESC    &kp HOME       &kp UP         &kp END        &none                            &none           &kp C_VOL_DN    &kp C_VOL_UP   &kp C_MUTE  &none
+                &kp TAB    &kp LEFT       &kp DOWN       &kp RIGHT      &none                            &kp LS(LALT)    &kp LSHIFT      &kp LGUI       &kp LALT    &kp LCTRL
+                &none      &kp LG(LS(N3)) &kp LG(LS(N4)) &kp LG(LS(N5)) &none       &mkp MB3  &mkp MB3   &none           &kp LG(MINUS)   &kp LG(EQUAL)  &none       &none
+								     	  &none	  		 &none  		&mo 2       &trans    &trans	 &kp LG(SPACE)   &none           &none
             >;
         };
     };
