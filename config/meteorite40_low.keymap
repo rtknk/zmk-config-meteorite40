@@ -65,25 +65,25 @@
         };
 
         CCPIDN {
-            bindings = <&ccfg C_CPI_DN;
+            bindings = <&ccfg C_CPI_DN>;
             key-positions = <32 33>;
             layers = <1>;
         };
 
         CCPIUP {
-            bindings = <&ccfg C_CPI_UP;
+            bindings = <&ccfg C_CPI_UP>;
             key-positions = <38 39>;
             layers = <1>;
         };
 
 		CROTDN {
-            bindings = <&ccfg C_ROT_DN;
+            bindings = <&ccfg C_ROT_DN>;
             key-positions = <32 33>;
             layers = <2>;
         };
 
         CROTUP {
-            bindings = <&ccfg C_ROT_UP;
+            bindings = <&ccfg C_ROT_UP>;
             key-positions = <38 39>;
             layers = <2>;
         };
