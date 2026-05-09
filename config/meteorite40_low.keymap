@@ -66,6 +66,12 @@
             layers = <2>;
         };
 
+		bootloader_combo {
+            bindings = <&bootloader>;
+            key-positions = <4 18>;
+            layers = <1 2>;
+        };
+
         CCPIDN {
             bindings = <&ccfg C_CPI_DN>;
             key-positions = <32 33>;
