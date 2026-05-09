@@ -132,7 +132,7 @@
         layer_2 {
             display-name = "ARROW";
             bindings = <
-                &kp ESC       &kp HOME       &kp UP         &kp END        &none                         &kp del         &kp C_VOL_DN    &kp C_VOL_UP   &kp C_MUTE  &kp BSPC
+                &kp ESC       &kp HOME       &kp UP         &kp END        &none                         &kp DEL         &kp C_VOL_DN    &kp C_VOL_UP   &kp C_MUTE  &kp BSPC
                 &kp TAB       &kp LEFT       &kp DOWN       &kp RIGHT      &none                         &kp LS(LALT)    &kp LSHIFT      &kp LGUI       &kp LALT    &kp LCTRL
                 &kp CAPSLOCK  &kp LG(LS(N3)) &kp LG(LS(N4)) &kp LG(LS(N5)) &none    &none     &none      &none           &kp LG(MINUS)   &kp LG(EQUAL)  &none       &none
 								     	  &kp LALT 		 &trans 		&none       &trans    &trans	 &kp LG(SPACE)   &trans          &trans
