@@ -110,11 +110,11 @@
                 , <&macro_release &kp LALT>;   // Altを離す
         };
 
-		// タップ時にマウス左クリックをトリガーするマクロ
+		// タップ時にマウス右クリックをトリガーするマクロ
         tap_mouse_left: tap_mouse_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &mkp MB1>;
+            bindings = <&macro_tap &mkp MB2>;
         };
     };
 
@@ -159,7 +159,7 @@
                 &kp ESC       &kp HOME       &kp UP         &kp END        &none                         &kp DEL         &kp C_VOL_DN    &kp C_VOL_UP   &kp C_MUTE  &kp BSPC
                 &kp TAB       &kp LEFT       &kp DOWN       &kp RIGHT      &none                         &kp LS(LALT)    &kp LSHIFT      &kp LGUI       &kp LALT    &kp LCTRL
                 &kp CAPSLOCK  &kp LG(LS(N3)) &kp LG(LS(N4)) &kp LG(LS(N5)) &none    &none     &none      &none           &kp LG(MINUS)   &kp LG(EQUAL)  &none       &none
-								     	  &kp LALT 		 &trans 		&none   &kp LSHIFT    &alt_mb1	 &kp LG(SPACE)   &trans          &trans
+								     	     &kp LALT 		&trans 		   &none    &none     &alt_mb1	 &kp LG(SPACE)   &trans          &trans
             >;
         };
     };
