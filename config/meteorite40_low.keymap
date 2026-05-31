@@ -109,6 +109,24 @@
                 , <&macro_release &mkp MB1>    // 左クリックを離す
                 , <&macro_release &kp LALT>;   // Altを離す
         };
+
+		// タップ時にマウス左クリックをトリガーするマクロ
+        tap_mouse_left: tap_mouse_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &mkp MB1>;
+        };
+    };
+
+	behaviors {
+        // holdでkp、tapでマクロ（マウス）を呼び出すカスタムhold-tap
+        hp_mouse: hp_mouse {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred"; // ホールドを優先する判定（好みに応じて変更可）
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&tap_mouse_left>; 
+        };
     };
 
     keymap {
@@ -118,10 +136,10 @@
         win_default_layer {
             display-name = "BASE";
             bindings = <
-                &kp Q        &kp W       &kp E        &kp R        &kp T                                &kp Y        &kp U      &kp I       &kp O    &kp P
-                &kp A        &kp S       &kp D        &kp F        &kp G                                &kp H        &kp J      &kp K       &kp L    &kp SEMI 
-                &mt LSHIFT Z &kp X       &kp C        &kp V        &kp B        &mkp MB1    &mkp MB2    &kp N        &kp M      &kp COMMA   &kp DOT  &mt LSHIFT SLASH
-									     &kp LCTRL    &kp LGUI     &lt 2 SPACE  &kp LSHIFT  &kp LSHIFT  &lt 1 ENTER  &kp LGUI   &kp LALT
+                &kp Q        &kp W       &kp E        &kp R        &kp T                                	&kp Y        &kp U      &kp I       &kp O    &kp P
+                &kp A        &kp S       &kp D        &kp F        &kp G                                	&kp H        &kp J      &kp K       &kp L    &kp SEMI 
+                &mt LSHIFT Z &kp X       &kp C        &kp V        &kp B        &kp LS(SQT) &kp SQT     	&kp N        &kp M      &kp COMMA   &kp DOT  &mt LSHIFT SLASH
+									     &kp LCTRL    &kp LGUI     &lt 2 SPACE  &mkp MB1    &hp_mouse LSHIFT 0    &lt 1 ENTER    &kp LGUI     &kp LALT
             >;
         };
 
@@ -131,7 +149,7 @@
                 &kp EXCL    &kp AT      &kp HASH     &kp DLLR      &kp PRCNT                           &kp CARET    &kp AMPS        &kp STAR      &kp LPAR      &kp RPAR
                 &kp N1      &kp N2      &kp N3       &kp N4        &kp N5                              &kp GRAVE    &kp MINUS       &kp EQUAL     &kp LBKT      &kp RBKT
                 &kp N6      &kp N7      &kp N8       &kp N9        &kp N0       &kp PIPE   &kp BSLH    &kp TILDE    &kp UNDERSCORE  &kp PLUS      &kp LBRC      &kp RBRC
-									    &kp DOT      &kp COMMA       &kp DOT    &trans     &trans      &none        &trans	     	&trans
+									    &kp DOT      &kp COMMA       &kp DOT    &mkp MB3   &mkp MB2    &none        &trans	     	&trans
             >;
         };
 
@@ -141,7 +159,7 @@
                 &kp ESC       &kp HOME       &kp UP         &kp END        &none                         &kp DEL         &kp C_VOL_DN    &kp C_VOL_UP   &kp C_MUTE  &kp BSPC
                 &kp TAB       &kp LEFT       &kp DOWN       &kp RIGHT      &none                         &kp LS(LALT)    &kp LSHIFT      &kp LGUI       &kp LALT    &kp LCTRL
                 &kp CAPSLOCK  &kp LG(LS(N3)) &kp LG(LS(N4)) &kp LG(LS(N5)) &none    &none     &none      &none           &kp LG(MINUS)   &kp LG(EQUAL)  &none       &none
-								     	  &kp LALT 		 &trans 		&none       &trans    &trans	 &kp LG(SPACE)   &trans          &trans
+								     	  &kp LALT 		 &trans 		&none   &kp LSHIFT    &alt_mb1	 &kp LG(SPACE)   &trans          &trans
             >;
         };
     };
